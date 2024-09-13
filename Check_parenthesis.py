@@ -29,8 +29,7 @@ class Stack:
 
     def push_all(self, val: Iterable[str]) -> None:
         for element in val:
-            if element in self.parenthesis:
-                self.container.append(element)
+            self.container.append(element)
 
     def reverse_string(self) -> str:
         reversed_str = ""
