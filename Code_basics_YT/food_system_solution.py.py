@@ -15,7 +15,6 @@ class Queue:
         if len(self.buffer) == 0:
             print("Queue is empty")
             return
-
         return self.buffer.pop()
 
     def is_empty(self):
