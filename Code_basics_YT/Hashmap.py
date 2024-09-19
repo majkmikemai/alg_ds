@@ -66,9 +66,11 @@ class HashTable:
         # hash = self.get_hash(key)
         # self.arr[hash] = None
         hash = self.get_hash(key)
-        for index, kv in enumerate(self.arr[hash]):
-            if kv[0] == key:
-                del [self.arr[hash][index]]
+        for index_kv, key_val in enumerate(self.arr[hash]):
+            if key_val[0] == key:
+                del [self.arr[hash][index_kv]]
+                return
+        raise KeyError("Key is not found")
 
 
 if __name__ == "__main__":
