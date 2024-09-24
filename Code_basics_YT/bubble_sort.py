@@ -3,9 +3,7 @@ def bubble_sort(elements):
     for j in range(size - 1):
         for i in range(size - 1):
             if elements[i] > elements[i + 1]:
-                tmp = elements[i]
-                elements[i] = elements[i + 1]
-                elements[i + 1] = tmp
+                elements[i], elements[i + 1] = elements[i + 1], elements[i]
     return elements
 
 

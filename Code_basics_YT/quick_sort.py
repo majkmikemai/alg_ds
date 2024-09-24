@@ -9,8 +9,7 @@ def lomuto_partition(elements, start, end):
             elements[i], elements[j] = elements[j], elements[i]
 
     elements[i + 1], elements[end] = elements[end], elements[i + 1]
-    print(elements)
-    print(i + 1)
+
     return i + 1
 
 
@@ -30,8 +29,6 @@ def hoare_partition(elements, start, end):
             i += 1
             j -= 1
     elements[start], elements[j] = elements[j], elements[start]
-    print(i, j)
-    print(elements)
 
     return j
 
@@ -41,12 +38,10 @@ def quick_sort(elements, start, end):
         return
     if start < end:
         p_idx = lomuto_partition(elements, start, end)
-        print("left")
+
         quick_sort(elements, start, p_idx - 1)
-        print("left has been performed")
-        print("right")
         quick_sort(elements, p_idx + 1, end)
-        print("right has been performed")
+
     return elements
 
 
