@@ -7,6 +7,7 @@ def insertion_sort(elements):
             elements[j + 1] = elements[j]
             j -= 1
         elements[j + 1] = anchor
+        print(elements)
 
         sorted_sublist = elements[: i + 1]
         mid = (i + 1) // 2
@@ -21,6 +22,7 @@ def insertion_sort(elements):
 
 
 if __name__ == "__main__":
-    elements = [2, 1, 5, 7, 2, 0, 5]
+    elements = [21, 19, 30, 5]
+    print(range(len(elements)))
     e = insertion_sort(elements)
     print(e)
