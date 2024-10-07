@@ -11,7 +11,7 @@ This thread serves an order every 2 seconds. Also start this thread 1 second aft
 import time
 import threading
 from collections import deque
-from collections import Iterable
+from collections.abc import Iterable
 
 
 class Queue:

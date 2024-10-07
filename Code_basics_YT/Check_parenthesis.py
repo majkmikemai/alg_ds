@@ -47,9 +47,7 @@ class Stack:
 
                 if self.is_empty() or self.peek() != self.opening_parenthesis[index]:
                     return False
-
                 self.container.pop()
-
         return self.is_empty()
 
 
