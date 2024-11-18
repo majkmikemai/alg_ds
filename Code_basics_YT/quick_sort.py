@@ -9,7 +9,6 @@ def lomuto_partition(elements, start, end):
             elements[i], elements[j] = elements[j], elements[i]
 
     elements[i + 1], elements[end] = elements[end], elements[i + 1]
-
     return i + 1
 
 
@@ -38,7 +37,6 @@ def quick_sort(elements, start, end):
         return
     if start < end:
         p_idx = lomuto_partition(elements, start, end)
-
         quick_sort(elements, start, p_idx - 1)
         quick_sort(elements, p_idx + 1, end)
 
@@ -48,3 +46,4 @@ def quick_sort(elements, start, end):
 if __name__ == "__main__":
     elements = [11, 9, 29, 7, 2, 15, 28]
     qs = quick_sort(elements, 0, len(elements) - 1)
+    print(elements)
